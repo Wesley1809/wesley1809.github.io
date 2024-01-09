@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS here -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pacstyle.css">
+
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-top" id="myBar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my world of coding and design</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+        <h2>About Me</h2>
+        <p>With a Bachelor of Commerce in Finance and over five years of banking experience, I am currently a Trainee Programmer at Capitec, one of the largest retail banks in South Africa. As a Trainee Programmer, I am learning how to develop, test, and maintain software applications that support the bank's operations and customer service. I am also applying my team leadership skills, which I developed as a Team Leader at Capitec Bank, where I managed a team of 15 service consultants and achieved high levels of customer satisfaction and retention. My core competencies include problem-solving, communication, and customer orientation. I am passionate about finance and technology, and I aspire to become a proficient programmer who can contribute to the bank's innovation and growth.</p>
+        <!-- Add more content here -->
+        </div>
+    </section>
+
+    <!-- new skills section -->
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">HTML</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div><br>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">CSS</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div><br>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">Java OOP</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div><br>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">Java Script</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div><br>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">MySQL</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div><br>
+            <div class="skill">
+                <div class="progress">
+                    <button class="change-btn decrease" data-skill="HTML" data-change="-10">-</button>
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-skill="HTML">MVC Frameworks</div>
+                    <button class="change-btn increase" data-skill="HTML" data-change="10">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+        <h2>My Portfolio</h2>
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+            
+            <div class="card-body">
+                
+                <h5 class="card-title">Pacman Project</h5>
+                        <p class="card-text">Interactive Pacman game I created.</p>
+                        <p>Hover over project to play</p>
+                        <!-- Pacman Game Container -->
+                        <div id="pacmanGameContainer">
+                            <div id="world"></div>
+                            <div id="pacman1"></div>
+                            <div id="pacman2"></div>
+                            <div id="ghost"></div>
+                            <div id="score">0 Lives: 3</div>
+                        </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- Repeat for more projects -->
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to contact me.</p>
+    
+            <!-- Contact Form -->
+            <form action="script.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+    
+            <!-- Additional Contact Information -->
+            <div class="additional-contact-info">
+                <p><strong>Phone:</strong> +27 61 456 5795</p>
+                <p><strong>Email:</strong> <a href="mailto:westley.petersen@umuzi.org">westley.petersen@umuzi.org</a></p>
+    
+                <!-- Social Media Links -->
+                <div class="social-media-links">
+                    <a href="https://www.linkedin.com/in/wesley-petersen/" target="_blank" class="btn btn-outline-secondary">LinkedIn</a>
+                    <a href="https://github.com/Wesley1809" target="_blank" class="btn btn-outline-secondary">GitHub</a>
+                    <!-- Add other social media links as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+            <!-- Social media links -->
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="pacscript.js"></script>
+
+</body>
+</html>
