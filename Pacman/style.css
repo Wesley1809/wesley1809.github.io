@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+div.brick {
+    background-color: blue;
+}
+
+div.coin {
+    background: url('coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.empty {
+    /* Define styles for empty cells if needed */
+}
+
+div#pacman1 {
+    background: url('pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+div#ghost {
+    background: url('pacmanGhost2.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+
+}
+
+
+
+#world {
+    font-size: 0;
+}
+
+div#score {
+    border: 1px solid white;
+    width: 80px;
+    height: 50px;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 210px;
+}
+
+div.cherry {
+    background: url('cherries.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div#pacman2 {
+    background: url('pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 2;
+}
+
+
