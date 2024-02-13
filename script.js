@@ -20,11 +20,7 @@ var pacman = {
     direction: "down"
 };
 
-var pacman2 = {
-    x: 8,
-    y: 1,
-    direction: "up"
-};
+
 
 var ghost = {
     x: 5,
@@ -87,11 +83,7 @@ function resetGame() {
         direction: "down"
     };
 
-    pacman2 = {
-        x: 8,
-        y: 1,
-        direction: "up"
-    };
+    
 
     ghost = {
         x: 5,
@@ -153,19 +145,7 @@ function displayPacman() {
         document.getElementById("pacman1").style.transform = "rotate(0deg)";
     }
 
-    document.getElementById("pacman2").style.top = pacman2.y * 20 + "px";
-    document.getElementById("pacman2").style.left = pacman2.x * 20 + "px";
-
-    document.getElementById("pacman2").style.transform = "rotate(0deg)";
-    if (pacman2.direction === "left") {
-        document.getElementById("pacman2").style.transform = "rotate(-90deg)";
-    } else if (pacman2.direction === "right") {
-        document.getElementById("pacman2").style.transform = "rotate(90deg)";
-    } else if (pacman2.direction === "up") {
-        document.getElementById("pacman2").style.transform = "rotate(180deg)";
-    } else if (pacman2.direction === "down") {
-        document.getElementById("pacman2").style.transform = "rotate(0deg)";
-    }
+    
 }
 
 function displayGhost() {
@@ -210,32 +190,7 @@ document.onkeydown = function (e) {
         displayScore();
     }
 
-    if (e.key === "w" && world[pacman2.y - 1][pacman2.x] !== 2) {
-        pacman2.y--;
-        pacman2.direction = "left";
-    } else if (e.key === "s" && world[pacman2.y + 1][pacman2.x] !== 2) {
-        pacman2.y++;
-        pacman2.direction = "right";
-    } else if (e.key === "a" && world[pacman2.y][pacman2.x - 1] !== 2) {
-        pacman2.x--;
-        pacman2.direction = "up";
-    } else if (e.key === "d" && world[pacman2.y][pacman2.x + 1] !== 2) {
-        pacman2.x++;
-        pacman2.direction = "down";
-    }
-
-    if (world[pacman2.y][pacman2.x] === 1) {
-        world[pacman2.y][pacman2.x] = 0;
-        score += 10;
-        displayWorld();
-        displayScore();
-    } else if (world[pacman2.y][pacman2.x] === 3) {
-        world[pacman2.y][pacman2.x] = 0;
-        score += 50;
-        displayWorld();
-        displayScore();
-    }
-
+    
     displayPacman();
 };
 
@@ -261,11 +216,7 @@ function resetGame() {
         direction: "down"
     };
 
-    pacman2 = {
-        x: 8,
-        y: 1,
-        direction: "up"
-    };
+  
 
     ghost = {
         x: 5,
