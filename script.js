@@ -77,17 +77,27 @@ function handlePacmanGhostCollision() {
 }
 
 function resetGame() {
-    pacman.x = 1;
-    pacman.y = 1;
-    pacman.direction = "down";
+    lives = 3;
+    score = 0;
+    level = 1;
 
-    pacman2.x = 8;
-    pacman2.y = 1;
-    pacman2.direction = "up";
+    pacman = {
+        x: 1,
+        y: 1,
+        direction: "down"
+    };
 
-    ghost.x = 5;
-    ghost.y = 5;
-    ghost.direction = "left";
+    pacman2 = {
+        x: 8,
+        y: 1,
+        direction: "up"
+    };
+
+    ghost = {
+        x: 5,
+        y: 5,
+        direction: "left"
+    };
 
     displayPacman();
     displayWorld();
@@ -121,6 +131,7 @@ function displayWorld() {
     document.getElementById("world").innerHTML = output;
 
     if (coinsRemaining === 0 && cherriesRemaining === 0) {
+        alert("Level Completed!");
         level++;
         lives = 3;
         resetGame();
@@ -227,3 +238,42 @@ document.onkeydown = function (e) {
 
     displayPacman();
 };
+
+function handleGameOver() {
+    alert("Game Over");
+    resetGame();
+}
+
+function handleLevelCompleted() {
+    alert("Level Completed!");
+    level++;
+    resetGame();
+}
+
+function resetGame() {
+    lives = 3;
+    score = 0;
+    level = 1;
+
+    pacman = {
+        x: 1,
+        y: 1,
+        direction: "down"
+    };
+
+    pacman2 = {
+        x: 8,
+        y: 1,
+        direction: "up"
+    };
+
+    ghost = {
+        x: 5,
+        y: 5,
+        direction: "left"
+    };
+
+    displayPacman();
+    displayWorld();
+    displayScore();
+}
