@@ -64,13 +64,25 @@ function handlePacmanGhostCollision() {
     lives--;
 
     if (lives <= 0) {
-        alert("Game Over");
+        alert("Game Over", resetGame); // Show the "Game Over" message and call resetGame() when OK is clicked
         level = 1;
         resetGame();
     } else {
-        resetGame();
+        console.log("Lives before displaying score:", lives); // Check the value of lives before displaying the score
+
+        displayScore();
+        // Reset the position of pacman
+        pacman = {
+            x: 1,
+            y: 1,
+            direction: "down"
+        };
+
+        displayPacman();
     }
 }
+
+
 
 function resetGame() {
     lives = 3;
@@ -90,6 +102,18 @@ function resetGame() {
         y: 5,
         direction: "left"
     };
+
+    world = [
+        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        [2, 1, 3, 1, 1, 1, 1, 3, 1, 2],
+        [2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+        [2, 1, 1, 1, 3, 1, 1, 2, 1, 2],
+        [2, 1, 2, 2, 2, 2, 1, 1, 1, 2],
+        [2, 1, 1, 1, 1, 1, 1, 2, 1, 2],
+        [2, 1, 2, 2, 2, 1, 2, 2, 1, 2],
+        [2, 1, 1, 1, 3, 1, 1, 1, 1, 2],
+        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+    ];
 
     displayPacman();
     displayWorld();
